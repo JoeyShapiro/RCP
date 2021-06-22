@@ -14,6 +14,7 @@ public class Node : MonoBehaviour
 
     private Renderer rend;
     private Color startColor;
+    public int smell;
 
     BuildManager buildManager;
 
@@ -63,6 +64,7 @@ public class Node : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //if (turret.GetComponent<Turret>().type == "Heart")
+            //smell = 10;
     }
 }
