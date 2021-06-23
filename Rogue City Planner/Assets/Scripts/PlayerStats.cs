@@ -13,6 +13,18 @@ public class PlayerStats : MonoBehaviour
     public static int Health;
     public int maxHealth = 100;
 
+    public Text HealthText;
+
+    public static int Energy;
+    public int maxEnergy = 3;
+
+    public Text EnergyText;
+
+    public static int Draw;
+    public int maxDraw = 6;
+
+    public Text DrawText;
+
     void Start() {
         Money = startMoney;
         Health = maxHealth;
@@ -20,5 +32,6 @@ public class PlayerStats : MonoBehaviour
 
     void Update() {
         MoneyText.text = "$" + Money.ToString();
+        HealthText.text = "Health: " + Health.ToString();
     }
 }
