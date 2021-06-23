@@ -27,8 +27,9 @@ public class WorldManager : MonoBehaviour
         Node spawn = world[0, 0].GetComponent<Node>();
 
         heart.turret = (GameObject) Instantiate(corePrefab, heart.GetBuildPosition(), Quaternion.identity);
-        heart.smell = 10;
+        heart.smell = 64;
         spawn.turret = (GameObject) Instantiate(spawnPrefab, spawn.GetBuildPosition(), Quaternion.identity);
+        WaveSpawner.spawnPoint = spawn.transform;
     }
 
     // Update is called once per frame
