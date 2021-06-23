@@ -10,8 +10,12 @@ public class PlayerStats : MonoBehaviour
 
     public Text MoneyText;
 
+    public static int Health;
+    public int maxHealth = 100;
+
     void Start() {
         Money = startMoney;
+        Health = maxHealth;
     }
 
     void Update() {

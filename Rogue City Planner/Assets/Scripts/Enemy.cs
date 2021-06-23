@@ -43,6 +43,12 @@ public class Enemy : MonoBehaviour
         x = (int) Math.Round(transform.position.x / 4);
         y = (int) Math.Round(transform.position.z / 4);
 
+        if(WorldManager.world[x,y].GetComponent<Node>().turret != null && WorldManager.world[x,y].GetComponent<Node>().turret.tag == "Heart") {
+            Destroy(gameObject);
+            PlayerStats.Health -= 1;
+            return;
+        }
+
         Node below = null;
         Node above = null;
         Node left = null;
