@@ -43,5 +43,6 @@ public class Shop : MonoBehaviour
 
     public void ButtonClicked(int buttonNo) {
         Debug.Log("Button Clicked" + buttonNo);
+        buildManager.SelectTurretToBuild(BuildingManager.standardTurret);
     }
 }
