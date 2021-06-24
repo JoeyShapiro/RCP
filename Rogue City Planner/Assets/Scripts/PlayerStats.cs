@@ -25,9 +25,14 @@ public class PlayerStats : MonoBehaviour
 
     public Text DrawText;
 
+    public static List<string> Deck;
+    public static List<string> Discard;
+
     void Start() {
         Money = startMoney;
         Health = maxHealth;
+        Energy = maxEnergy;
+        Draw = maxDraw;
     }
 
     void Update() {
